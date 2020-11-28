@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <Adafruit_TCS34725.h>
 
-Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_1X);
+Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_154MS, TCS34725_GAIN_4X);
 bool rot = false;
 bool blau = false;
 bool gelb = false;
@@ -29,26 +29,27 @@ void readColor()
  Serial.print("\tGreen:"); Serial.print(g);
  Serial.print("\tBlue:"); Serial.println(b);
 
- if(r>=1.2 && g<0.85 && b<1.1)
+ if(r>=1.15 && g<0.85 && b<1)
  {
   Serial.println("rot");
   rot = true;
  }
 
- if(r <0.65 && g<1 && b>1.45)
+ if(r <0.6 && g<1.1 && b>1.4)
  {
   Serial.println("blau");
   blau = true;
  }
- if(r > 1.15 && g>1 && b<0.75)
+ if(r > 1.1 && g>1 && b<0.75)
  {
   Serial.println("gelb");
   gelb= true;
  }
- if(r<0.7 && g>=1 && b>1.25)
+ if(r<0.7 && g>=1.1 && b>1.15)
  {
   Serial.println("grün");
   gruen = true;
  }
+
 
 }
