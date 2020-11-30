@@ -12,8 +12,8 @@ void setup() {
   servo2.attach(7);
   servo3.attach(9);
   gripper.attach(11);
-  strip.begin();
-    strip.setBrightness(250);
+  strip.begin();                  //start the neopixels
+    strip.setBrightness(250);     //set to maximum brightness
     strip.show(); // Initialize all pixels to 'off'
    if (tcs.begin()) {                       //start the colorsensor
 
@@ -39,10 +39,9 @@ void loop() {
 
   if(gruen == true)                     //movements for each color
   {
-  greenLight();
+    greenLight();
     take();
-      //movement for the green position
-      greenMovement();
+    greenMovement();
     gruen = false;
 
   }
@@ -50,8 +49,8 @@ void loop() {
   if(rot == true)
   {
     redLight();
-   take();
-   redMovement();
+    take();
+    redMovement();
     rot = false;
   }
 
@@ -59,7 +58,7 @@ void loop() {
   {
     yellowLight();
     take();
-      yellowMovement();
+    yellowMovement();
     gelb = false;
   }
 

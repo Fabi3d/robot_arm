@@ -1,9 +1,9 @@
 #include <Adafruit_NeoPixel.h>
 
-#define PIN 4
+#define PIN 4             //the neopixels are connected to the digital pin 4
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(7, PIN, NEO_GRB + NEO_KHZ800);
 
-void greenLight()
+void greenLight()                     //for loops for the running lights of each color
 {
   for(int i = 0; i<=6; i++)
   {
