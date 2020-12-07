@@ -1,3 +1,8 @@
+/*
+ * author: Fabian Klotz
+ * date of lastest change: 01.12.2020
+ * lastest changes: added neopixels to the robot arm to show visualy the color of the Lego part
+*/
 #include <Arduino.h>                          //include the Arduino framework and all necessary librarys
 #include "farberkennung.h"
 #include "move_servos.h"

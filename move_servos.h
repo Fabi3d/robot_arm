@@ -93,9 +93,9 @@ delay(120);
 
 void take()
 {
-  moveToPosition(100, 100, 90, 120, 5);
-  moveToPosition(100,100, 43, 120, 5);
-  moveToPosition(100, 172, 43, 5, 5);
+  moveToPosition(105, 100, 90, 120, 5);
+  moveToPosition(105,100, 47, 120, 5);
+  moveToPosition(105, 170, 47, 5, 5);
   moveToPosition(105, 100, 90, 5, 5);
 }
 void greenMovement()

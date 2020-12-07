@@ -29,6 +29,8 @@ void readColor()
  Serial.print("\tGreen:"); Serial.print(g);
  Serial.print("\tBlue:"); Serial.println(b);
 
+
+
  if(r>=1.15 && g<0.85 && b<1)
  {
   Serial.println("rot");
