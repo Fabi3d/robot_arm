@@ -90,6 +90,13 @@ delay(120);
 
 
 }
+void Initialize()
+{
+  moveToPosition(180, 120, 120, 90, 5);
+  moveToPosition(180, 50, 50, 90, 5);
+  moveToPosition(0, 120, 120, 90, 5);
+  moveToPosition(100, 50, 50, 90, 5);
+}
 
 void take()
 {

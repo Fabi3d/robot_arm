@@ -30,7 +30,9 @@ void setup() {
  }
 
 goHome();                               //move to the home position
-delay(2000);
+delay(500);
+Initialize();
+
 
 }
 
@@ -38,41 +40,25 @@ delay(2000);
 
 void loop() {
   // put your main code here, to run repeatedly:
-        //example movement: moveToPosition(servo1, servo2, servo3, gripper, delay)
-  readColor();                          //call the method readColor() to get the tcs measurement
-
-
-  if(gruen == true)                     //movements for each color
-  {
-    greenLight();
-    take();
-    greenMovement();
-    gruen = false;
-
-  }
-
-  if(rot == true)
-  {
+  if(readColor() == "red"){
     redLight();
     take();
     redMovement();
-    rot = false;
   }
-
-  if (gelb == true)
-  {
-    yellowLight();
-    take();
-    yellowMovement();
-    gelb = false;
-  }
-
-  if(blau == true)
-  {
+  if(readColor() == "blue"){
     blueLight();
     take();
     blueMovement();
-    blau = false;
+  }
+  if(readColor() == "green"){
+    greenLight();
+    take();
+    greenMovement();
+  }
+  if(readColor() == "yellow"){
+    yellowLight();
+    take();
+    yellowMovement();
   }
 
 
