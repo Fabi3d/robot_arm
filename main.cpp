@@ -1,6 +1,6 @@
 /*
  * author: Fabian Klotz
- * date of lastest change: 01.12.2020
+ * date of lastest change:30.12.2020
  * lastest changes: added neopixels to the robot arm to show visualy the color of the Lego part
 */
 #include <Arduino.h>                          //include the Arduino framework and all necessary librarys
@@ -26,13 +26,16 @@ void setup() {
  } else {
 
    Serial.println("TCS34725 nicht gefunden ... Ablauf gestoppt!");
-// while (1);
+   while (1);
  }
 
 goHome();                               //move to the home position
 delay(500);
-Initialize();
-
+redLight();
+greenLight();
+blueLight();
+yellowLight();
+//Initialize();
 
 }
 
